@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo student</title>
+</head>
+
+<style>
+    body {
+      background-color: rgb(208, 196, 196);
+    }
+
+    .container {
+      width: 400px;
+      height: 400px;
+      border: 2px solid rgb(17, 17, 16);
+      margin: auto;
+      background-color: rgb(245, 241, 241);
+    }
+
+    input {
+      border: 2px solid rgb(214, 17, 224);
+      background-color: rgb(7, 239, 38);
+      border-radius: 2px;
+      width: 100px;
+      height: 30px;
+      padding: 0 10px;
+      font-size: 30px;
+      color: hsl(0, 0%, 3%);
+    }
+
+    .searchbox {
+      float: right;
+      margin-top: 5px;
+      margin-right: 5px;
+    }
+    .image_container{
+    /* { width:300px; */
+      /* border:2px solid rgb(254, 6, 18); */
+      clear:both;
+      margin:0 auto;
+      margin-top:50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .image_container img{
+   
+      width:300px;
+      margin-right:auto;
+    }
+    .food-pro{
+      font-size: 20px;
+      background-color: rgb(210, 179, 179);
+border: none;
+font-size: 20px;
+    }
+  </style>
+<body>
+    <body>
+        <div class="container">
+          <div class="searchbox_container">
+          <div class="searchbox">
+            <input class="search" type="number" value=" " placeholder="ID">
+          </div>
+        </div>
+           
+          <div class="image_container">
+              <img src="photo/1.jpeg" alt="" 
+               class="actionimages">
+              <img src="photo/2.jpg" alt=""
+               class="actionimages">
+              <img src="photo/300.jpeg" alt="" 
+               class="actionimages">
+               <img src="photo/675.jpeg" alt="" 
+               class="actionimages">
+              <img src="photo/711.jpg" alt="" 
+               class="actionimages">
+              <img src="photo/675.jpeg" alt="" 
+               class="actionimages">
+               <img src="photo/300.jpeg" alt="" 
+               class="actionimages">
+              <img src="photo/7.jpeg" alt="" 
+               class="actionimages">
+              <img src="photo/frute.jpeg" alt="" 
+               class="actionimages">
+               <img  src="photo/680.jpg" alt="" 
+               class="actionimages" >
+              <img src="photo/9.jpg" alt="" 
+               class="actionimages">
+              <img src="photo/711.jpg" alt="" 
+               class="actionimages">
+               <img src="photo/12.jpeg" alt="" 
+               class="actionimages">
+              <img src="photo/400.jpg" alt="" 
+               class="actionimages">
+      
+      
+          </div>  
+        </div>
+        <script >
+          let input=document.querySelector('.search');
+let images=document.querySelectorAll('.image_container > img');
+input.addEventListener('keydown',function(){
+    for(let i=0; i<images.length;i++)
+  {
+        if(new RegExp(this.value).test(images[i].src))
+      {      
+        images[i].style.display ='block'
+      }
+      else
+      {
+        images[i].style.display ='none'
+      }
+      console.log(images[i].src)
+  }
+}) 
+        </script>
+</body>
+</html>
